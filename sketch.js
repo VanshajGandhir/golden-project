@@ -9,5 +9,10 @@ game = new Game()
 function draw () {
  
 if(gameState === "start")
-  game.story()
+  game.start()
+
+if(gameState === "play") { 
+  clear();
+  game.play()
+}
 }
