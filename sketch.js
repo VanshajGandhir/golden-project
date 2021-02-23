@@ -1,7 +1,18 @@
-var gameState,game
+var gameState,game,blueballImg,yellowballImg,redballImg,purpleballImg,greenballImg;
+function preload() {
+blueballImg=loadImage("blueball.png");
+redballImg=loadImage("redball.png");
+purpleballImg=loadImage("purpleball.png");
+greenballImg=loadImage("greenball.png");
+yellowballImg=loadImage("yellowball.png");
 
+
+
+
+
+}
 function setup() {
-createCanvas(windowWidth,windowHeight);
+createCanvas(600,600);
 gameState = "start";
 game = new Game()
 }
@@ -13,6 +24,7 @@ if(gameState === "start")
 
 if(gameState === "play") { 
   clear();
-  game.play()
+  game.hide();
+  game.play();
 }
 }

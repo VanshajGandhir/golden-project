@@ -12,13 +12,15 @@ class Game {
             this.story.position(windowWidth/2 - 100,windowHeight/2 + 100);
             this.button.position(windowWidth/2,windowHeight/2 + 300);
             this.button.mousePressed( ()=> {
-                gameState = "play";               
+                gameState = "play";
+                               
                 })
         }
           
     play () {
-        background("black");
+        //background("black");
         var spiderMan = createSprite(200,200,20,20);
+        drawSprites(); 
         if (keyDown("up")){
             spiderMan.velocityY = 5;}
         if (keyDown("down")){
@@ -27,7 +29,7 @@ class Game {
             spiderMan.velocityX = -5;}      
         if (keyDown("right")){
             spiderMan.velocityX = 5;}  
-            drawSprites(); 
+            
     }
     hide() {
         this.heading.hide();
